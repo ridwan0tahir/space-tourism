@@ -10,7 +10,7 @@ const Technology = () => {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/public/data.json")
       .then((resp) => {
         return resp.json();
       })
