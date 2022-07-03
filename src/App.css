@@ -113,20 +113,20 @@ main {
 }
 
 .home {
-  background: url("./assets/home/background-home-mobile.jpg") no-repeat center;
+  background: url("/assets/home/background-home-mobile.jpg") no-repeat center;
 }
 
 .destination {
-  background: url("./assets/destination/background-destination-mobile.jpg")
+  background: url("/assets/destination/background-destination-mobile.jpg")
     no-repeat center;
 }
 
 .crew {
-  background: url("./assets/crew/background-crew-mobile.jpg");
+  background: url("/assets/crew/background-crew-mobile.jpg");
 }
 
 .technology {
-  background: url("./assets/technology/background-technology-mobile.jpg");
+  background: url("/assets/technology/background-technology-mobile.jpg");
 }
 
 /* Tablet Styles */
@@ -186,7 +186,7 @@ main {
     font-size: 1rem;
     letter-spacing: 0.16875rem;
   }
-
+/* 
   .home {
     background: url("/public/assets/home/background-home-desktop.jpg");
   }
@@ -201,5 +201,5 @@ main {
 
   .technology {
     background: url("/public/assets/technology/background-technology-tablet.jpg");
-  }
+  } */
 }
