@@ -1,7 +1,6 @@
 import "./Destination.css";
 import ButtonMap from "../../components/ButtonMap";
 import { useEffect, useState } from "react";
-import LazyLoad from "react-lazy-load";
 
 const Destination = () => {
   useEffect(() => {
@@ -28,9 +27,9 @@ const Destination = () => {
             <span>01</span>Pick your destination
           </h5>
 
-          <LazyLoad className="destination__imgContainer">
+          <section className="destination__imgContainer">
             <img src={data[index].images.webp} alt="" />
-          </LazyLoad>
+          </section>
 
           <section className="destination__description">
             <section className="destination__buttonContainer">
