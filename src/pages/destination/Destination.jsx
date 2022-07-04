@@ -10,7 +10,7 @@ const Destination = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("/public/data.json")
+    fetch("/data.json")
       .then((resp) => {
         return resp.json();
       })
@@ -18,7 +18,7 @@ const Destination = () => {
   }, []);
 
   const [index, setIndex] = useState(0);
-
+  console.log(data);
   return (
     <main>
       {data.length > 0 && (
