@@ -1,5 +1,6 @@
 import "./Destination.css";
 import ButtonMap from "../../components/ButtonMap";
+import useFetch from "../../hooks/useFetch";
 import { useEffect, useState } from "react";
 
 const Destination = () => {
@@ -7,18 +8,8 @@ const Destination = () => {
     document.getElementById("app").className = "destination";
   }, []);
 
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch("/data.json")
-      .then((resp) => {
-        return resp.json();
-      })
-      .then((apiData) => setData(apiData.destinations));
-  }, []);
-
+  const data = useFetch("destinations");
   const [index, setIndex] = useState(0);
-  console.log(data);
   return (
     <main>
       {data.length > 0 && (

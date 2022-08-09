@@ -1,22 +1,14 @@
 import "./Crew.css";
 import ButtonMap from "../../components/ButtonMap";
 import { useEffect, useState } from "react";
+import useFetch from "../../hooks/useFetch";
 
 const Crew = () => {
   useEffect(() => {
     document.getElementById("app").className = "crew";
   }, []);
 
-  const [data, setData] = useState("");
-
-  useEffect(() => {
-    fetch("/public/data.json")
-      .then((resp) => {
-        return resp.json();
-      })
-      .then((apiData) => setData(apiData.crew));
-  }, []);
-
+  const data = useFetch("crew");
   const [index, setIndex] = useState(0);
 
   console.log(data);

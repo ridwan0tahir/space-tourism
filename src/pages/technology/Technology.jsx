@@ -1,22 +1,14 @@
 import "./Technology.css";
 import ButtonMap from "../../components/ButtonMap";
 import { useEffect, useState } from "react";
+import useFetch from "../../hooks/useFetch";
 
 const Technology = () => {
   useEffect(() => {
     document.getElementById("app").className = "technology";
   }, []);
 
-  const [data, setData] = useState("");
-
-  useEffect(() => {
-    fetch("/public/data.json")
-      .then((resp) => {
-        return resp.json();
-      })
-      .then((apiData) => setData(apiData.technology));
-  }, []);
-
+  const data = useFetch("technology");
   const [index, setIndex] = useState(0);
 
   return (
