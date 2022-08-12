@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+
+
+/* CUSTOM PROPERTIES */
+:root {
+    /* Colors */
+    --dark-color: hsl(230, 35%, 7%);
+    --light-blue: hsl(231, 77%, 90%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --ff-barlow: "Barlow", sans-serif;
+    --ff-barlow-condensed: "Barlow Condensed", sans-serif;
+    --ff-bellefair: "Bellefair";
+
+    --fs-body: 0.9375rem;
+    --fs-heaading-1: 5rem;
+    --fs-heading-2: 3.5rem;
+    --fs-heading-3: 1.5rem;
+    --fs-heading-4: 1rem;
+    --fs-heading-5: 1rem;
+    --fs-subheading-1: 1.75rem;
+    --fs-subheading-2: 0.875rem;
+    --fs-nav-text: 1rem;
+
+    /* Line Height */
+    --lh-body: 1.5625rem;
+    --lh-heading-1: 6.25rem;
+    --lh-heading-5: 1.2rem;
+
+    /* Letter Spacing */
+    --ls-heading-5: 0.16875rem;
+}
+
+
+/* RESET */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--white);
+    font-size: var(--fs-body);
+    font-family: var(--ff-bellefair);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: var(--fs-heaading-1);
+    line-height: var(--lh-heading-1);
+}
+
+h2 {
+    font-size: var(--fs-heading-2);
+}
+
+h3 {
+    font-size: var(--fs-heading-3);
+}
+
+h4 {
+    font-size: var(--fs-heading-4);
+}
+
+h5 {
+    font-size: var(--fs-heading-5);
+    font-family: var(--ff-barlow-condensed);
+    font-weight: inherit;
+    letter-spacing: var(--ls-heading-5);
+    line-height: var(--lh-heading-5);
+}
+
+p {
+    color: var(--light-blue);
+    font-family: var(--ff-barlow);
+    line-height: var(--lh-body);
+    text-transform: initial;
+}
+
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    letter-spacing: 0.078125rem;
+    text-transform: uppercase;
+    font-family: var(--ff-bellefair);
+}
+
+a,
+img,
+button {
+    display: block;
+}
+
+img {
+    height: auto;
+}
+
+/* REUSED STYLES */
+.sub-heading-1 {
+    font-size: var(--fs-subheading-1);
+}
+
+.sub-heading-2 {
+    font-size: var(--fs-subheading-2);
+    letter-spacing: 0.1475rem;
+}
+
+.nav-text {
+    font-size: var(--fs-nav-text);
+    letter-spacing: 0.16875rem;
+}
+
+.nav-text,
+.sub-heading-2 {
+    color: var(--light-blue);
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+
+/* MAIN */
+main {
+    min-height: 85vh;
+    width: 87.2%;
+    margin-inline: auto;
+}

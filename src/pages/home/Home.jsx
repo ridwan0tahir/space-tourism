@@ -7,9 +7,8 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="home-main">
-      <section className="home__section">
-        <article className="home__content">
+    <main className="home-section">
+        <article className="home-content">
           <h5>So, you want to travel to</h5>
           <h1>space</h1>
           <p>
@@ -20,8 +19,7 @@ const Home = () => {
           </p>
         </article>
 
-        <button className="home__btn">Explore</button>
-      </section>
+        <button className="home-btn">Explore</button>
     </main>
   );
 };

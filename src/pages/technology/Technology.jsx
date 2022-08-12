@@ -12,36 +12,39 @@ const Technology = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <main>
+    <main className="tech-section">
       {data.length > 0 && (
-        <section className="tech__section">
-          <h5 className="tech__header">
-            <span>03</span>Space launch 101
-          </h5>
+        <>
 
-          <img
-            className="tech__img"
-            src={data[index].images.landscape}
-            alt=""
-          />
+          <h5 className="tech-header"><span>03</span>Space launch 101</h5>
 
-          <section className="tech__description">
-            <section className="tech__buttonContainer">
+          <section className="tech-content">
+            <figure className="tech-image-container">
+              <img
+                src={data[index].images.landscape}
+                alt=""
+              />
+            </figure>
+            
+            <section className="tech-button-container">
               <ButtonMap
-                customClass={"tech__button"}
+                customClass={"tech-button"}
                 names={data.map((_, _index) => [_index + 1])}
                 handleClick={(index) => {
                   setIndex(index);
                 }}
               />
             </section>
-            <article className="tech__content">
-              <p>The Terminology...</p>
-              <h3>{data[index].name}</h3>
+
+            <article className="tech-detail">
+              <div className="tech-title">
+                <p>The Terminology...</p>
+                <h3>{data[index].name}</h3>
+              </div>
               <p>{data[index].description}</p>
             </article>
           </section>
-        </section>
+        </>
       )}
     </main>
   );
